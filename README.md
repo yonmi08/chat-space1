@@ -8,7 +8,7 @@
 
 ### Association
 - has_many :groups_users
-- has_many :users, through :groups_users
+- has_many :users, through: :groups_users
 - has_many :messages
 
 
@@ -16,10 +16,10 @@
 |Column|Type|Options|
 |------|----|-------|
 |email|string|null: false|
-|nickname|string|null: false|
+|nickname|string|null: false|index: ture|
 ### Association
 - has_many :groups_users
-- has_many :groups, through :groups_users
+- has_many :groups, through: :groups_users
 - has_many :messages
 
 
@@ -39,8 +39,8 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
-|image|text|
+|text|text||
+|image|text||
 |group_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
