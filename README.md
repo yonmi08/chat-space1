@@ -40,6 +40,7 @@
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
+|image|text|null: false|
 |group_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
