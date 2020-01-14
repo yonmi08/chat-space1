@@ -1,0 +1,36 @@
+.main
+  .main__group
+    .main__group__left-box
+      .main__group-title
+        techcamp
+      .main__group-member
+        Member : ren
+    .main__group__right
+      .main_group-edit
+      =link_to "#", classs: "edit__btn" do
+        Edit
+
+  .main__message
+    .main__message-sub
+      .main__message-sub-name
+        ren
+      .main__message-sub-date
+        2020/1/13(Mon) 23:08:00
+    .main__message-text
+      nice day
+    .main__message-sub
+      .main__message-sub-name
+        ren
+      .main__message-sub-date
+        2020/1/13(Mon) 23:08:00
+    .main__message-text
+      nice day
+
+  .main__form
+    %form.message
+      .input-box
+        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+        %label{class: "input-box__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class: "input-box__image__file"}
+      %input{type: "submit", class: "submit-btn"}
