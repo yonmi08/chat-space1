@@ -2,16 +2,6 @@
   box-sizing: border-box;
 }
 
-@mixin white {
-  color: white;
-}
-
-@mixin display {
-  display: flex;
-}
-
-$blue: #38aef0;
-
 .wrapper {
   @include display;
   height: 100vh;
