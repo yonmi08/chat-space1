@@ -1,0 +1,24 @@
+.side-bar
+  .side-bar__side-header
+    .top-box
+      %p.top-box__user-name
+        ren
+      %ul.top-box__icons
+        %li.top-box__user-name__edit
+        =link_to "#", class: "edit-btn" do
+          = icon('fas', 'edit', class: "edit-btn")
+        %li.top-box__user-name__setting
+        =link_to "#", class: "setting-btn" do
+          = icon('fas', 'cog', class: "setting-btn")
+
+  .side-bar__group-list
+    .group-box
+      %p.group-box__group-name
+        techcamp
+      %p.group-box__group-messaqges
+        まだメッセージがありません
+    .group-box
+      %p.group-box__group-name
+        techcamp
+      %p.group-box__group-messaqges
+        まだメッセージがありません
