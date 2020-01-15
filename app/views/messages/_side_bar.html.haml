@@ -5,20 +5,17 @@
         =current_user.name
       %ul.top-box__icons
         %li.top-box__user-name__edit
-        =link_to "#", class: "edit-btn" do
+        =link_to new_group_path do
           = icon('fas', 'edit', class: "edit-btn")
         %li.top-box__user-name__setting
         =link_to edit_user_path(current_user) do
           = icon('fas', 'cog', class: "setting-btn")
 
   .side-bar__group-list
-    .group-box
-      %p.group-box__group-name
-        techcamp
-      %p.group-box__group-messaqges
-        まだメッセージがありません
-    .group-box
-      %p.group-box__group-name
-        techcamp
-      %p.group-box__group-messaqges
-        まだメッセージがありません
+    - current_user.groups.each do |group|
+      .group-box
+        = link_to '#' do
+          %p.group-box__group-name
+            = group.name
+          %p.group-box__group-messaqges
+            まだメッセージがありません
