@@ -2,13 +2,13 @@
   .side-bar__side-header
     .top-box
       %p.top-box__user-name
-        ren
+        =current_user.name
       %ul.top-box__icons
         %li.top-box__user-name__edit
         =link_to "#", class: "edit-btn" do
           = icon('fas', 'edit', class: "edit-btn")
         %li.top-box__user-name__setting
-        =link_to "#", class: "setting-btn" do
+        =link_to edit_user_path(current_user) do
           = icon('fas', 'cog', class: "setting-btn")
 
   .side-bar__group-list
