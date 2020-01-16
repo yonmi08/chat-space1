@@ -2,35 +2,26 @@
   .main__group
     .main__group__left-box
       .main__group-title
-        techcamp
+        = @group.name
       .main__group-member
-        Member : ren
+        - @group.users.each do |user|
+          = user.name
     .main__group__right
       .main_group-edit
       =link_to edit_group_path(@group) do
         Edit
 
   .main__message
-    .main__message-sub
-      .main__message-sub-name
-        ren
-      .main__message-sub-date
-        2020/1/13(Mon) 23:08:00
-    .main__message-text
-      nice day
-    .main__message-sub
-      .main__message-sub-name
-        ren
-      .main__message-sub-date
-        2020/1/13(Mon) 23:08:00
-    .main__message-text
-      nice day
+    = render @messages
 
-  .main__form
-    %form.message
-      .input-box
-        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
-        %label{class: "input-box__image"}
-          = icon('fas', 'image')
-          %input{type: "file", class: "input-box__image__file"}
-      %input{type: "submit", class: "submit-btn"}
+  .main__form 
+    .input-box
+      = form_for [@group, @message] do |f|
+        = f.text_field :text, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
+
+        
