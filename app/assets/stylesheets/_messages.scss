@@ -130,6 +130,7 @@ a {
 
 .main__message {
   padding: 35px 40px 0px;
+  overflow: auto;
   .main__message-sub {
     @include display;
     margin-bottom: 12px;
@@ -155,31 +156,32 @@ a {
 }
 
 
-form.message {
-  @include display;
-}
-
-.input-box {
+.new_message {
   @include display;
   width: 100%;
-  position: relative;
-  &__text {
+
+
+  .form__message {
+    position: relative;
     height: 50px;
     width: 100%;
     margin: 0 auto;
     right: 10px;
   }
-  &__image {
+  .form__mask {
+    position: relative;
+  }
+  .form__mask__image {
     position: absolute;
-    right: 10px;
+    right: 25px;
     top: 10px;
-    &__file {
+    .hidden {
       display: none;
     }
   }
 }
 
-.submit-btn {
+.form__submit {
   @include white;
   height: 50px;
   width: 100px;
