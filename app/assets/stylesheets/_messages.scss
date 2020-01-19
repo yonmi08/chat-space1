@@ -130,7 +130,7 @@ a {
 
 .main__message {
   padding: 35px 40px 0px;
-  overflow: auto;
+  overflow: scroll;
   .main__message-sub {
     @include display;
     margin-bottom: 12px;
