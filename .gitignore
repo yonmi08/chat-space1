@@ -17,4 +17,4 @@
 .byebug_history
 
 # Ignore public uploads
-/public/uplpads
+public/uplpads/*
