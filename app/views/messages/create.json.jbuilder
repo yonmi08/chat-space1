@@ -4,5 +4,3 @@ json.text @message.text
 json.image @message.image_url
 json.id @message.id
 
-
-
