@@ -94,6 +94,7 @@ var image = //imageのみ
         }
         })
         .fail(function() {
+          alert('メッセージの送信に失敗しました');
         });
       };
     if (document.location.href.match(/\/groups\/\d+\/messages/)) {
